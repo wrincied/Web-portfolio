@@ -57,9 +57,11 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+
 				.header__text{
 					text-align: center;
 					max-width: 465px;
+					margin-bottom: 29px;
 					p{
 						font-size: 48px;
 						color: #FFFFFF;
@@ -67,7 +69,16 @@
 					}
 				}
 				.header__button{
-	
+					a{
+						border: 3px solid #00D6B4;
+						border-radius: 3px;
+						padding: 10px 26px;
+						text-decoration: none;
+						color: #00D6B4;
+						font-size: 13px;
+						line-height: 19px;
+						text-transform: uppercase;						
+					}
 				}
 			}
 		}
