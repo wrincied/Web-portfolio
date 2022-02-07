@@ -16,7 +16,7 @@ body,html{
 	flex-direction: column;
 	.header{
 		background-image: url('../assets/background-image/IMAGE.png');
-		background-position: center center;
+		background-position:top  center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		min-height: 65.21052631578947vh;
@@ -24,9 +24,13 @@ body,html{
 		flex-direction: column;
 		position: relative;
 		border-radius: 0px;
+		padding: 0 25px;
 		&::after{
 			content: "";
 			display: block;    
+			@media screen and (max-width:768px) {
+				display: none;
+			}
 			width: 100%;
 			height: 40%;  
 			position: absolute;
@@ -39,6 +43,9 @@ body,html{
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
+			@media screen and (max-width:768px) {
+				flex-direction: column;
+			}
 			height: 80px;
 			.header__logo{
 				p{
@@ -84,11 +91,15 @@ body,html{
 					margin-bottom: 29px;
 					p{
 						font-size: 48px;
+						@media screen and (max-width:768px) {
+							font-size: 35px;
+						}
 						color: #FFFFFF;
 						line-height: 53px;
 					}
 				}
 				.header__button{
+					margin-bottom: 50px;
 					a{
 						border: 1px solid #00D6B4;
 						border-radius: 3px;
@@ -104,6 +115,7 @@ body,html{
 		}
 	}
 	.main-content{
+		padding: 0 25px;
         flex: 1 1 auto;
 		display: flex;
 		justify-content: center;
@@ -117,13 +129,34 @@ body,html{
 			}
 		}
 		&__items{
-			display: grid;
-			grid-row-gap: 1em;
-			grid-template-columns: repeat(3, 1fr);
-			grid-column-gap: 300px 300px 300px;
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			@media screen and (max-width:1000px) {
+				// flex-direction: column;
+				.main-content__item{
+					margin: 15px;
+				}
+			}
+			.main-content__col1{
+
+			}
+			.main-content__col2{
+
+			}
+			.main-content__col3{
+
+			}
+			.main-content__item{
+				display: block;
+				text-decoration: none;
+				margin: 20px;
+			}
 		}
 	}
 	.footer{
+		padding: 0 25px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -141,10 +174,13 @@ body,html{
 					}
 				}
 				.footer__subtitle{
-					font-family: 'Open Sans', sans-serif;
-					font-size: 12px;
-					line-height: 18px;					
-					color: #999999;
+					a{
+						font-family: 'Open Sans', sans-serif;
+						font-size: 12px;
+						line-height: 18px;					
+						color: #999999;
+						text-decoration: none;
+					}
 				}
 			}
 		}
